@@ -2,7 +2,7 @@
 img { max-width: 100%; }
 html { font: 14px sans-serif;  }
 body {  background: #f7f7f7; }
-a { color: ##337ab7; text-decoration: none; }
+a { color: #337ab7; text-decoration: none; }
 .container { max-width: 1000px; margin: 0 auto; }
 article { background: #eee; margin-top: 2rem; padding: 1rem 5rem; border-radius: 10px; }
 figure { background: white; border: 1px solid #999; padding: 5px;  border-radius: 5px; }
