@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: open Sans, sans-serif;
+}
+
+p{
+    margin-bottom: 3vh;
+}
+
+/* navbar desktop */
+.navbar{
+    grid-area: navbar;
+}
+
+nav ul{
+    display: flex;
+    padding: 2rem;
+}
+nav ul li{
+    list-style: none;
+    padding-right: 1.5rem; 
+}
+
+.nav-link{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 0.2rem;
+}
+.nav-link:hover{
+   border-bottom: 1px solid white;
+}
+
+/* hero section */
+header{
+    background-image: url('../img/hero-img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8vh 1fr;
+    grid-template-areas: "navbar navbar"
+                         "text .";
+    
+}
+
+.hero-text{
+    grid-area: text;
+    margin: auto;
+    font-size: large;
+    padding-left: 2em;
+}
+.hero-text h1{
+    font-size: 4rem
+    
+}
+.hero-text h3,h1{
+    margin-bottom: 3vh;
+}
+
+
+
+/* button style */
+.btn{
+
+    text-decoration: none;
+    color: #FE763B;
+    background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #FE763B;
+}
+.btn:hover{
+    background-color: #FE763B;
+    color: white;
+}
+
+
+.link-text{
+text-decoration: none;
+color: #FE763B;
+padding-bottom: 0.2rem;
+}
+
+.link-text img{
+    vertical-align: middle;
+}
+
+.link-text:hover{
+    border-bottom: 1px solid #FE763B;
+}
+
+
+/* description sections */
+.description-block{
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "image text";
+  margin-bottom: 5rem;
+  margin-top: 3vh;
+}
+.description-block-inverted{
+    grid-template-areas: "text image";
+}
+.description-block h3{
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: x-large;
+}
+.description-block .text{
+    grid-area: text;
+    margin: auto;
+    padding: 5vw;
+}
+.image{
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+ .image img{
+      width: 30vw;
+      padding: 1rem;
+  }
+
+  @media all and (max-width:800px){
+header{
+    grid-template-areas: 
+    "navbar navbar "
+    "text text";
+}
+.description-block{
+    grid-template-areas: "text text"
+    "image image" ;
+}
+
+.image img{
+    width: 100%;
+}
+}
+
+/* video */
+.video{
+    width: 100vw;
+    display: grid;
+    background-color: #FA976D;
+    color: white;
+   
+    
+}
+.video h3{
+    margin: auto;
+    padding-top: 3rem;
+}
+.video iframe{
+    padding: 3rem;
+    margin: auto;
+   
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+ 
+}
+input{
+    border: none;
+    border-bottom: 1px solid gray;
+    margin-bottom: 3rem;
+}
