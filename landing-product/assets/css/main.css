@@ -141,7 +141,7 @@ header{
 }
 
 .image img{
-    width: 100%;
+    width: 80%;
 }
 }
 
@@ -158,11 +158,6 @@ header{
     margin: auto;
     padding-top: 3rem;
 }
-.video iframe{
-    padding: 3rem;
-    margin: auto;
-   
-}
 form{
     display: flex;
     flex-direction: column;
@@ -173,4 +168,16 @@ input{
     border: none;
     border-bottom: 1px solid gray;
     margin-bottom: 3rem;
+}
+
+.video-div{
+  grid-area: image;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+iframe{
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }

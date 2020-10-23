@@ -39,7 +39,7 @@
           <p>Discover the wide variety of soups we offer.
 We make a new batch everyday offering options for all diets like vegan, keto, meaty, halal, and so much more.</p>
 <p>We listen to our costumers and deliver based on their needs.</p>
-<a class="link-text" href="#">Discover our menu <i><img src="/assets/img/arrow.svg" alt="arrow"></i></a>
+<a class="link-text" href="#">Discover our menu <i><img src="assets/img/arrow.svg" alt="arrow"></i></a>
         </div>
         <div class="image">
           <img src="assets/img/variety-of-soups.jpg" alt="soups" />
@@ -50,7 +50,7 @@ We make a new batch everyday offering options for all diets like vegan, keto, me
         <div class="text">
           <h3>Local ingredients</h3>
           <p>We love to work closely with our local farmers to support them and bring you the best products all year round!</p>
-<a class="link-text" href="#">Discover our menu <i><img src="/assets/img/arrow.svg" alt="arrow"></i></a>
+<a class="link-text" href="#">Discover our menu <i><img src="assets/img/arrow.svg" alt="arrow"></i></a>
         </div>
         <div class="image">
           <img src="assets/img/farmer.jpg" alt="soups" />
@@ -58,27 +58,32 @@ We make a new batch everyday offering options for all diets like vegan, keto, me
       </section>
 
       <!-- video section -->
-      <section class="video">
-          <h3>Easy chiken noodle soup recipe</h3>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/D4r3t8VMYSI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <section class="description-block video">
+        <div class="text">
+          <h3>Subscribe</h3>
+          <p>join our mailing list to recieve delicious updates and recipes like this one!</p>
+        </div>
+
+        <div class="video-div">
+          <iframe  src="https://www.youtube.com/embed/D4r3t8VMYSI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </section>
 
       <!-- contact -->
-      <section class="description-block">
+      <section class="description-block description-block-inverted">
         <div class="text">
           <h3>Contact us</h3>
-          <p>Want to know more? don't hesitate to leave us a message</p>
-         
-        
-        <form action="">
-            <input type="text" placeholder="Name">
-             <input type="text" placeholder="Email">
-              <input type="text" placeholder="Message">
+          <p>Want to know more? Don't hesitate to leave us a message</p>
+        <form action="POST" data-netlify="true">
+            <input type="text" name="name" placeholder="Name">
+             <input type="text" name="email" placeholder="Email">
+              <input type="text" name="message" placeholder="Message">
+              <input type="submit" class="btn" value="let's talk">
         </form>
-           <a class="btn" href="#">Let's talk</a>
+           <!-- <a class="btn" href="#">Let's talk</a> -->
         </div>
         <div class="image">
-          <img src="assets/img/contact.png" alt="soups" />
+          <img src="assets/img/contact.svg" alt="soups" />
         </div>
 
       </section>
