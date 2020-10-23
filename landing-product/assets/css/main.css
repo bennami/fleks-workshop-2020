@@ -55,11 +55,13 @@ header{
     padding-left: 2em;
 }
 .hero-text h1{
-    font-size: 4rem
+    font-size: 4rem;
+    font-family: 'Proza Libre', sans-serif;
     
 }
 .hero-text h3,h1{
     margin-bottom: 3vh;
+    padding-right: 5vw;
 }
 
 
@@ -88,6 +90,7 @@ padding-bottom: 0.2rem;
 
 .link-text img{
     vertical-align: middle;
+    padding-left: 0.5rem ;
 }
 
 .link-text:hover{
@@ -111,6 +114,7 @@ padding-bottom: 0.2rem;
       margin-top: 2rem;
       margin-bottom: 1rem;
       font-size: x-large;
+      font-family: 'Proza Libre', sans-serif;
 }
 .description-block .text{
     grid-area: text;
@@ -129,21 +133,7 @@ padding-bottom: 0.2rem;
       padding: 1rem;
   }
 
-  @media all and (max-width:800px){
-header{
-    grid-template-areas: 
-    "navbar navbar "
-    "text text";
-}
-.description-block{
-    grid-template-areas: "text text"
-    "image image" ;
-}
 
-.image img{
-    width: 80%;
-}
-}
 
 /* video */
 .video{
@@ -158,18 +148,8 @@ header{
     margin: auto;
     padding-top: 3rem;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
- 
-}
-input{
-    border: none;
-    border-bottom: 1px solid gray;
-    margin-bottom: 3rem;
-}
 
+/* iframe responsive */
 .video-div{
   grid-area: image;
   position: relative;
@@ -180,4 +160,164 @@ iframe{
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+/* form */
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+input{
+    border: none;
+    border-bottom: 1px solid gray;
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+/* mailchimp override */
+#mc_embed_signup form{
+    padding: 0;
+}
+#mc_embed_signup input{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+#mc_embed_signup .button{
+    background-color:white;
+    color: #FE763B;
+    border: 1px solid white;
+}
+#mc_embed_signup .button:hover{
+    background-color: white;
+}
+
+
+/* footer */
+footer{
+    background-color: #4B1D0A;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "nav-links logo social-links" ;
+    color: white;
+}
+
+footer ul li{
+    list-style: none;
+  
+}
+
+.footer-div{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.footer-div img{
+    margin: 1.5rem;
+    width: 50px;
+}
+
+.social-links{
+    display: flex;
+   
+}
+.social-links i{
+    font-size: 1.5rem;
+    padding-right: 1rem;
+} 
+.social-links a{
+    color: white;
+}
+
+.nav-menu{
+    display: none;
+}
+@media all and (max-width:800px){
+    header{
+        grid-template-areas: 
+        "navbar navbar "
+        "text text";
+    }
+    .description-block{
+        grid-template-areas: "text text"
+        "image image" ;
+    }
+
+    .image img{
+        width: 80%;
+    }
+
+    footer{
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "nav-links" "logo" "social-links" ;
+    padding: 2rem;
+    
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .nav-menu{
+        display: block;
+    }
+}
+
+/* ////////burger menu mobile */
+
+.nav-menu{
+    grid-area: navbar;
+    z-index: 3;
+}
+
+.nav-mobile-hide{
+    display: none;
+}
+.nav-menu nav ul{
+    display: flex;
+    flex-direction: column;
+    padding-top: 13vh;
+    padding-left: 3rem;
+}
+
+.nav-menu nav ul li{
+    padding-bottom: 1rem;
+}
+
+.nav-mobile-show{
+    display: block;
+    grid-area: navbar;
+    background-color: #FA976D;
+    height: 50vh;
+    z-index: 3;
+}
+
+.navbar-mobile ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-mobile ul li{
+    padding: 1rem;
+}
+.burger{
+position: absolute;
+cursor:pointer;
+margin: 3rem;
+z-index: 4;
+}
+.burger div{
+    width: 35px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 5px;
 }
